@@ -1,44 +1,29 @@
+> 几次尝试写一个简单的分类器, 试图转到iOS都失败了, 终于走通了一次
+
 # iOS-CoreML-MNIST
-
-This is the implementation of Number recognition using Keras-MNIST model on Apple's CoreML Framework.
-
-The app fetches image from your hand writing and perform number recognition in real-time.
+使用 scikit-learn RandomForestClassifier 输出Model, 使用 CoreMLTools 转换成iOS可食用的Model, 简单将流程走通
+数据使用MNist, 识别手写数字0-9
 
 ## Requirements
 
-- Xcode 10.0 beta
-- iOS 12
-- For training: Python 3.6 (Keras 2.1.6, TensorFlow 1.5.0, CoreMLTools 2.0b1)
+- Xcode 11.0
+- iOS 13.1
+- For training: Python 3.7.4 (scikit-learn 0.20.3, CoreMLTools 3.0)
 
 ## Usage
 
-To use this app, open **iOS-CoreML-MNIST.xcodeproj** in Xcode 10 and run it on a device with iOS 12. (You can also use simulator)
+[原项目使用Keras](https://github.com/r4ghu/iOS-CoreML-MNIST), 看机器学习实战书, 尝试使用Scikit-Learn实现
 
 ## Training
 
-If you want to train your own custom model, follow the tutorial given below to create an anaconda environment. Enter the environment and run the following commands in terminal with `./nnet` as master directory.
-
-```
-(coreml) $ python train.py
-(coreml) $ python convert.py
-```
-
-I also included a jupyter notebook for better understanding the above code. You need to use it with root permissions for mainly converting the keras model to CoreML model. Initialise the jupyter notebook instance with the following command:
-
-```
-(coreml) $ jupyter notebook --allow-root
-```
-
-## Tutorial
-
-If you are interested in training your custom MNIST model from scratch, a **step-by-step tutorial** is available at - [**Link**](https://sriraghu.com/2017/07/06/computer-vision-in-ios-coremlkerasmnist/)
+[教程](https://github.com/ageron/handson-ml) 03_classification 分类
 
 ## Results
 
-These are the results of the app when tested on iPhone 7. 
+These are the results of the app when tested on iPhone XR. 
 
-<img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0016.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0017.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0018.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0019.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0020.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0021.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0022.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0023.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0024.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0025.PNG" alt="Result 1" width="280"> <img src="https://github.com/r4ghu/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0026.PNG" alt="Result 1" width="280">
+<img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0266.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0267.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0268.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0269.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0270.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0271.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0272.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0273.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0274.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0275.PNG" alt="Result 1" width="280"> <img src="https://github.com/ChaosTong/iOS-CoreML-MNIST/blob/master/Screenshots/IMG_0276.PNG" alt="Result 1" width="280">
 
 ## Author
 
-Sri Raghu Malireddi / [@r4ghu](https://sriraghu.com)
+ChaosTong / [@ChaosTong](https://weibo.com/2048284377/profile)
